@@ -4,11 +4,11 @@ A responsive single-page portfolio for Max Weiner, a mechanical engineering stud
 
 ## Website URL
 
-The GitHub Pages address for this repository is:
+The intended GitHub Pages URL for this repository is:
 
 `https://mawa30-hue.github.io/Portfolio/`
 
-If you rename the repository later, update the Pages URL accordingly and enable Pages from the `main` branch.
+Enable GitHub Pages in the repository settings and select the `main` branch so the static site is published at that address.
 
 ## Run locally
 

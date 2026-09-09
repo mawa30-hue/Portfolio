@@ -40,10 +40,9 @@ a { color: inherit; text-decoration: none; }
 .status-dot { background: var(--acid); border-radius: 50%; height: 7px; margin-top: 4px; width: 7px; }
 .status-dot { background: var(--warm); border-radius: 50%; height: 7px; margin-top: 4px; width: 7px; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { font-family: var(--serif); font-size: clamp(57px, 8.5vw, 128px); font-weight: 500; letter-spacing: -.07em; line-height: .88; margin-bottom: 40px; max-width: 710px; }
-h1 em, h2 em { color: var(--warm); font-family: var(--serif); font-weight: 400; letter-spacing: -.06em; }
-.hero-intro { color: #b8bab2; font-size: 17px; line-height: 1.6; max-width: 430px; }
-.hero-intro { color: #655b4d; font-family: var(--condensed); font-size: 19px; line-height: 1.45; max-width: 430px; }
+h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(57px, 8.5vw, 128px); font-weight: 500; letter-spacing: -.07em; line-height: .88; margin-bottom: 40px; max-width: 710px; }
+h1 em, h2 em { color: var(--warm); font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -.06em; }
+.hero-intro { color: #655b4d; font-family: Georgia, serif; font-size: 19px; line-height: 1.45; max-width: 430px; }
 .hero-actions { align-items: center; display: flex; gap: 28px; margin-top: 40px; }
 .button { align-items: center; display: inline-flex; font-family: 'DM Mono', monospace; font-size: 11px; gap: 28px; letter-spacing: .04em; padding: 16px 18px; text-transform: uppercase; transition: transform .2s ease, background .2s ease; }
 .button { align-items: center; display: inline-flex; font-family: 'DM Mono', monospace; font-size: 10px; gap: 28px; letter-spacing: .06em; padding: 16px 18px; text-transform: uppercase; transition: transform .2s ease, background .2s ease; }
