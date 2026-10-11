@@ -295,7 +295,81 @@ h1 span, h2 em { color: var(--warm); }
   color: rgba(255,255,255,0.9);
 }
 
+.interests {
+  background: var(--paper-strong);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.interests-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: end;
+  gap: 40px;
+  margin-top: 82px;
+}
+.interests-intro h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(40px, 4.8vw, 72px);
+  line-height: 0.96;
+  letter-spacing: -0.08em;
+}
+.interests-intro p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+}
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 52px;
+}
+.interest-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 220px;
+  padding: 26px 22px 24px;
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+}
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--warm);
+  color: var(--warm);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.interest-card h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(25px, 2.5vw, 36px);
+  line-height: 1.04;
+  letter-spacing: -0.06em;
+}
+.interest-card p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
 .work {
+  background: var(--paper);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.experience {
+  background: var(--paper);
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -304,6 +378,22 @@ h1 span, h2 em { color: var(--warm); }
   align-items: end;
   justify-content: space-between;
   gap: 24px;
+}
+.resume-header,
+.experience-heading {
+  margin-bottom: 32px;
+}
+.heading-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.heading-stack h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(52px, 6vw, 96px);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
 }
 .section-note {
   max-width: 360px;
@@ -369,6 +459,64 @@ h1 span, h2 em { color: var(--warm); }
   color: var(--ink);
 }
 
+.links-panel {
+  background: var(--dark);
+  color: var(--paper);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.links-header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.links-header h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(42px, 4.8vw, 76px);
+  line-height: 0.96;
+  letter-spacing: -0.08em;
+}
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 60px;
+}
+.link-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  padding: 26px 22px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(199, 165, 106, 0.75);
+}
+.link-label,
+.link-card em {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.link-card strong {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+  color: var(--paper);
+}
+.link-card em {
+  align-self: flex-start;
+  color: rgba(255,255,255,0.8);
+}
+
 .services {
   background: var(--paper-strong);
   padding-top: 120px;
@@ -376,9 +524,11 @@ h1 span, h2 em { color: var(--warm); }
 }
 .services-layout {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 7vw;
-  margin-top: 76px;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 36px;
+  align-items: start;
+  max-width: 1100px;
+  margin-top: 18px;
 }
 .services h2 {
   margin: 0;
@@ -389,7 +539,25 @@ h1 span, h2 em { color: var(--warm); }
   font-weight: 500;
 }
 .service-list {
+  max-width: 820px;
   border-top: 1px solid var(--line);
+}
+
+.experience-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.experience-media img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+.experience-media img:first-child {
+  grid-column: 1 / -1;
+  height: 250px;
 }
 .service-item {
   display: grid;
@@ -428,15 +596,16 @@ h1 span, h2 em { color: var(--warm); }
 }
 
 .resume-block {
-  background: var(--paper);
+  background: var(--paper-strong);
   padding-top: 110px;
   padding-bottom: 120px;
 }
 .resume-layout {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 8vw;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 36px;
+  align-items: center;
+  max-width: 1100px;
 }
 .resume-copy h2 {
   margin: 0;
@@ -448,6 +617,7 @@ h1 span, h2 em { color: var(--warm); }
 .resume-details {
   border-left: 1px solid var(--warm);
   padding-left: 20px;
+  margin-top: 0;
 }
 .resume-row {
   display: grid;
@@ -472,6 +642,22 @@ h1 span, h2 em { color: var(--warm); }
 }
 .resume-details .button {
   margin-top: 22px;
+}
+.resume-media {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+.resume-media embed {
+  width: 100%;
+  height: 500px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 20px 30px rgba(31, 26, 23, 0.08);
+}
+.resume-media .text-link {
+  align-self: flex-start;
 }
 
 .contact {
@@ -574,6 +760,7 @@ h1 span, h2 em { color: var(--warm); }
   }
 
   .statement-content,
+  .interests-intro,
   .services-layout,
   .resume-layout,
   .contact {
@@ -582,6 +769,7 @@ h1 span, h2 em { color: var(--warm); }
   }
 
   .statement-content,
+  .interests-intro,
   .services-layout,
   .resume-layout {
     margin-top: 52px;
@@ -600,9 +788,16 @@ h1 span, h2 em { color: var(--warm); }
     margin-top: 24px;
   }
 
-  .project-grid {
+  .project-grid,
+  .interest-grid,
+  .link-grid {
     grid-template-columns: 1fr;
     margin-top: 52px;
+  }
+
+  .interest-card,
+  .link-card {
+    margin-top: 18px;
   }
 
   .resume-details {
